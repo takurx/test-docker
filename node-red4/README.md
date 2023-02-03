@@ -5,6 +5,19 @@
     - https://github.com/node-red/node-red-docker/tree/master/docker-custom
 
 ```
+chiya@ujimatsu:~/JetsonWorks3/test-docker/node-red4$ sudo ./docker-ubuntu-focal.sh 
+#########################################################################
+node-red version: 3.0.2
+#########################################################################
+Sending build context to Docker daemon  120.8kB
+Step 1/31 : ARG ARCH=amd64
+Step 2/31 : ARG NODE_VERSION=16
+Step 3/31 : ARG OS=buster-slim
+Step 4/31 : FROM ${ARCH}/node:${NODE_VERSION}-${OS} AS base
+invalid reference format
+```
+
+```
 chiya@ujimatsu:~/JetsonWorks3/test-docker/node-red4$ sudo ./docker-debian.sh 
 #########################################################################
 node-red version: 3.0.2
