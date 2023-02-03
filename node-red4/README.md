@@ -4,6 +4,20 @@
 - node-red-docker/docker-custom at master · node-red/node-red-docker
     - https://github.com/node-red/node-red-docker/tree/master/docker-custom
 
+
+```
+chiya@ujimatsu:~/JetsonWorks3/test-docker/node-red4$ sudo ./docker-ubuntu-focal.sh 
+#########################################################################
+node-red version: 3.0.2
+#########################################################################
+Sending build context to Docker daemon  121.3kB
+Step 1/31 : ARG ARCH=amd64
+Step 2/31 : ARG NODE_VERSION=16
+Step 3/31 : ARG OS=buster-slim
+Step 4/31 : FROM ${ARCH}/node:${NODE_VERSION}-${OS} AS base
+manifest for amd64/node:16-focal-20230126 not found: manifest unknown: manifest unknown
+```
+
 ```
 chiya@ujimatsu:~/JetsonWorks3/test-docker/node-red4$ sudo ./docker-ubuntu-focal.sh 
 #########################################################################
