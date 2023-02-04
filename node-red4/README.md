@@ -11,6 +11,45 @@ chiya@ujimatsu:~/JetsonWorks3/test-docker/node-red4$ sudo ./docker-ubuntu.sh
 #########################################################################
 node-red version: 3.0.2
 #########################################################################
+Sending build context to Docker daemon  186.9kB
+Step 1/38 : ARG ARCH=amd64
+Step 2/38 : ARG NODE_VERSION=16
+......
+......
+ ---> 45c979b3c11f
+Step 36/38 : ENV NODE_RED_VERSION=$NODE_RED_VERSION     NODE_PATH=/usr/src/node-red/node_modules:/data/node_modules     PATH=/usr/src/node-red/node_modules/.bin:${PATH}     FLOWS=flows.json
+ ---> Running in 75a38c1aed96
+Removing intermediate container 75a38c1aed96
+ ---> 347a3a2dffd4
+Step 37/38 : EXPOSE 1880
+ ---> Running in 5f051e23a4e6
+Removing intermediate container 5f051e23a4e6
+ ---> b6e9287f2c52
+Step 38/38 : ENTRYPOINT ["./entrypoint.sh"]
+ ---> Running in 81efb1bec65c
+Removing intermediate container 81efb1bec65c
+ ---> 13522924cdd0
+Successfully built 13522924cdd0
+Successfully tagged testing:node-red-build
+```
+
+```
+......
+......
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/c++.1.gz because associated file /usr/share/man/man1/g++.1.gz (of link group c++) doesn't exist
+Setting up gnupg (2.2.19-3ubuntu2.2) ...
+Setting up build-essential (12.8ubuntu1.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+/bin/sh: 1: npm: not found
+The command '/bin/sh -c apt-get update && apt-get install -y build-essential python &&     npm install --unsafe-perm --no-update-notifier --no-fund --only=production &&     npm uninstall node-red-node-gpio &&     cp -R node_modules prod_node_modules' returned a non-zero code: 127
+```
+
+```
+chiya@ujimatsu:~/JetsonWorks3/test-docker/node-red4$ sudo ./docker-ubuntu.sh 
+#########################################################################
+node-red version: 3.0.2
+#########################################################################
 Sending build context to Docker daemon  158.7kB
 Step 1/35 : ARG ARCH=amd64
 Step 2/35 : ARG NODE_VERSION=16

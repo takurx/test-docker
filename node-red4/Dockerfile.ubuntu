@@ -10,6 +10,10 @@ FROM ${OS_ROS2}:${OS_ROS2_TAG} AS base
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+COPY --from=node /usr/local/include/ /usr/local/include/
+COPY --from=node /usr/local/lib/ /usr/local/lib/
+COPY --from=node /usr/local/bin/ /usr/local/bin/
+
 # Copy scripts
 COPY scripts/*.sh /tmp/
 
@@ -26,7 +30,7 @@ RUN set -ex && \
         openssh-client \
         ca-certificates && \
     mkdir -p /usr/src/node-red /data && \
-    deluser --remove-home node && \
+    # deluser --remove-home node && \
     # adduser --home /usr/src/node-red --disabled-password --no-create-home node-red --uid 1000 && \
     useradd --home-dir /usr/src/node-red --uid 1000 node-red && \
     chown -R node-red:root /data && chmod -R g+rwX /data && \
