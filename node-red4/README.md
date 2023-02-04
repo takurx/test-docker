@@ -5,6 +5,10 @@
     - https://github.com/node-red/node-red-docker/tree/master/docker-custom
 - Node.js Docker baseイメージには alpine < distroless < ubuntu+slim 構成がよさそう
     - https://zenn.dev/jrsyo/articles/e42de409e62f5d
+- node - Official Image | Docker Hub
+    - https://hub.docker.com/_/node
+- ubuntu - Official Image | Docker Hub
+    - https://hub.docker.com/_/ubuntu
 
 ```
 chiya@ujimatsu:~/JetsonWorks3/test-docker/node-red4$ sudo ./docker-ubuntu.sh 
