@@ -1,5 +1,11 @@
 # Log
 
+- Please write Dockerfile for ROS2
+    - Here is an example Dockerfile for ROS2:
+    - This Dockerfile sets up an Ubuntu 20.04 base image and installs ROS2 foxy on it. It also sets the default entrypoint to bash, so you can interact with the container in a terminal.
+
+-> success, docker build and docker run
+
 - New chat
     - https://chat.openai.com/chat
 
